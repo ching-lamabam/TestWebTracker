@@ -1,0 +1,37 @@
+To run
+
+go mod download
+go mod vendor
+go run cmd/main.go
+
+============================================================================================
+
+To run test
+go test github.com/ching-lamabam/web-tracker/internal/pkg
+go test github.com/ching-lamabam/web-tracker/internal/rest
+
+============================================================================================
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:   export GIN_MODE=release
+ - using code:  gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /web-tracker/v1/ping      --> github.com/ching-lamabam/web-tracker/internal/rest.(*trackerRest).GetPing-fm (2 handlers)
+[GIN-debug] GET    /web-tracker/v1/img       --> github.com/ching-lamabam/web-tracker/internal/rest.(*trackerRest).GetImg-fm (2 handlers)
+[GIN-debug] Listening and serving HTTP on :3000
+============================================================================================
+
+API
+http://localhost:3000/web-tracker/v1/ping
+http://localhost:3000/web-tracker/v1/img
+
+http://localhost:3000/web-tracker/v1/ping
+ --- for success scenario
+      touch /tmp/ok
+
+http://localhost:3000/web-tracker/v1/img
+ --- for success scenario
+      add image at /tmp/img.png
+============================================================================================
+
+
+
