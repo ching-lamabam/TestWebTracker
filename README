@@ -33,5 +33,6 @@ http://localhost:3000/web-tracker/v1/img
       add image at /tmp/img.png
 ============================================================================================
 
-
+To scale we can have a distributed microservice architecture where the image is deployed a docker images & horizontal scaling is possible using kubernetes
+scaling architecture . We can also have a load balancer to receive the incoming request.We can also use CDN to cache the image.
 
